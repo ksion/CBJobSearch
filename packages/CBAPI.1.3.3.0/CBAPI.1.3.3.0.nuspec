@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CBAPI</id>
+    <version>1.3.3.0</version>
+    <title>CareerBuilder.com API</title>
+    <authors>Jeffery Yeary</authors>
+    <owners>Jeffery Yeary</owners>
+    <licenseUrl>https://github.com/usbsnowcrash/Careerbuilder.com-API-for-.Net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/usbsnowcrash/Careerbuilder.com-API-for-.Net/wiki</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A fluent style wrapper for the careerbuilder.com API</description>
+    <summary>A wrapper for the careerbuilder api found at http://api.careerbuilder.com
+
+More details can be found here at https://github.com/usbsnowcrash/Careerbuilder.com-API-for-.Net/wiki</summary>
+    <releaseNotes>Add events that can be hooked for logging
+
+Add timeout property to the API Interface to make it easy to change</releaseNotes>
+    <copyright>(c) 2012 Jeffery Yeary</copyright>
+    <language>en-US</language>
+    <tags>careerbuilder api rest jobs careerbuilder.com</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="RestSharp" version="104.1" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="CBApi.dll" />
+    </references>
+  </metadata>
+</package>
