@@ -12,8 +12,8 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
-/CBJobSearch/[Ww]eb.config
-/CBJobSearch/*.config
+CBJobSearch/[Ww]eb.config
+CBJobSearch/*.config
 
 # Build results
 [Dd]ebug/
