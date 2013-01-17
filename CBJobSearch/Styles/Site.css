@@ -15,7 +15,7 @@
 body
 {
     font-size: 20px;
-    font-family: specialFont, Arial, "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+    font-family: specialFont, "Segoe UI" , Verdana, Helvetica, Sans-Serif;
 }
 
 body th
@@ -66,6 +66,7 @@ body input[type="submit"]:hover
 .listWrap
 {
     border: 1px solid rgb(180, 180, 180);
+    margin: 2em 1.5em 1.5em 1.5em;
 }
 
 .foam_outer 

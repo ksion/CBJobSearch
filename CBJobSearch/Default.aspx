@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <fieldset>
-        <legend>OMG THE WORLD IS ENDING!!!</legend>
+        <legend>Simple</legend>
         <div class="mainText" contenteditable="inherit" dir="ltr">
             I wish to search within the
             <asp:DropDownList ID="DropDown1" runat="server" PlaceHolder="What Job Category?">

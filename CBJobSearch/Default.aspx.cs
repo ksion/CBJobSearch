@@ -7,22 +7,27 @@ using com.careerbuilder.api.models.service;
 using com.careerbuilder.api.models.responses;
 using System.Collections;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace CBJobSearch
 {
     public partial class _Default : System.Web.UI.Page
     {
         ResponseJobSearch answers = null;
-        ICBApi api = API.GetInstance("WDH71FM75F6NY15TZPPC");
-        
+
+        static NameValueCollection appSettings = ConfigurationManager.AppSettings;
+        static string[] values = appSettings.GetValues(0);
+        static ICBApi api = API.GetInstance(values[0]);
+
+        List<Category> cats = api.GetCategories().WhereCountryCode(CountryCode.US).ListAll();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             prepareDropDownList();
 
-            List<Category> cats = api.GetCategories().ListAll();
-
             if (IsPostBack)
-            {   
+            {
                 /* Values from form */
                 var category = DropDown1.SelectedValue;
                 var location = TextBox1.Text;
@@ -37,21 +42,12 @@ namespace CBJobSearch
                     rptList.DataSource = answers.Results;
                     rptList.DataBind();
                 }
-                
-                
 
-
-                
-                
             }
-
-
         }
 
         private void prepareDropDownList()
         {
-            var cats = api.GetCategories().ListAll();
-
             DropDown1.Items.Add(new ListItem("What Job Category?", "ALL"));
 
             foreach (var category in cats)
@@ -65,8 +61,8 @@ namespace CBJobSearch
 
         }
 
-    
-        private ResponseJobSearch performSearch(string location, string keywords, Category                                                                          catToSearch)
+
+        private ResponseJobSearch performSearch(string location, string keywords, Category catToSearch)
         {
             ResponseJobSearch ace;
 
@@ -147,9 +143,5 @@ namespace CBJobSearch
 
             return ace;
         }
-
-        
-
-
     }
 }
