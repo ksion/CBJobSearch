@@ -12,7 +12,8 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
-[Ww]eb
+[Ww]eb.config
+*.config
 
 # Build results
 [Dd]ebug/
