@@ -2,10 +2,6 @@
 #[Bb]in/
 [Oo]bj/
 
-#Don't Ask for this!
-Web.config
-web.config
-
 # mstest test results
 TestResults
 
@@ -16,6 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
+[Ww]eb
 
 # Build results
 [Dd]ebug/
