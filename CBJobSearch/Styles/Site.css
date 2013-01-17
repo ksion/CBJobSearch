@@ -1,21 +1,21 @@
 ﻿/* CUSTOMS
 ----------------------------------------------------------*/
-@font-face
+/*@font-face
 {
     font-family: specialFont;
-    src: url(Quicksand_Light.otf);
+    
 }
 
 @font-face
 {
     font-family: sFBold;
     src: url(Quicksand_Bold.otf);
-}
+}*/
 
 body
 {
-    font-size: 20px;
-    font-family: specialFont, "Segoe UI" , Verdana, Helvetica, Sans-Serif;
+    font-size: 15px;
+    font-family: Consolas;
 }
 
 body th
@@ -35,15 +35,15 @@ body th
 
 body h1 
 {
-    font-family: sFBold;
+    font-family: Consolas;
     font-size: 34px;
     color: #516fad;
 }
 
 body input[type="submit"] 
 {
-    font-family: specialFont;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: Consolas;
     color: White;
     padding: .7em 1em;
     float:right;
@@ -144,7 +144,7 @@ fieldset
 
 legend
 {
-    font-size: 20px;
+    font-size: 18px;
     padding: 0.4em 0.8em;
     border: 1px solid #DF7E0E;
     color: White;
