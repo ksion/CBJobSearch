@@ -2,6 +2,10 @@
 #[Bb]in/
 [Oo]bj/
 
+#Don't Ask for this!
+Web.config
+web.config
+
 # mstest test results
 TestResults
 
@@ -99,7 +103,6 @@ ClientBin
 [Ss]tyle[Cc]op.*
 ~$*
 *.dbmdl
-Web.config
 Generated_Code #added for RIA/Silverlight projects
 
 # Backup & report files from converting an old project file to a newer
