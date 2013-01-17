@@ -12,7 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
-CBJobSearch/Web.config
+CBJobSearch/Web.config.xml
 
 # Build results
 [Dd]ebug/
