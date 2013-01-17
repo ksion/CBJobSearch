@@ -12,7 +12,7 @@ TestResults
 *.suo
 *.user
 *.sln.docstates
-Web.config
+*.config
 
 # Build results
 [Dd]ebug/
