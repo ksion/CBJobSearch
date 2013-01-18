@@ -151,7 +151,6 @@ select
 {
     font: Consolas;
     vertical-align: middle;
-    /*white-space: pre;*/
     -webkit-rtl-ordering: logical;
     border-radius: 5px;
     border-color: Orange;
@@ -175,12 +174,6 @@ tbody
 
 table
 {
-    /*padding: 1.0em 1.4em 1.4em 1.4em;
-    text-align: left;
-    vertical-align: middle;
-    border: .7px solid #006;
-    border-spacing: 0px;
-    border-radius: 15px;*/
     border-collapse:collapse;
     text-align: left;
     font: 11px arial;
@@ -214,7 +207,7 @@ td
     vertical-align: top;
     border-collapse: collapse;
     text-align: left;
-    color: rbg(51, 51, 51);   
+    color: rgb(51, 51, 51);   
 }
 
 td.special-col
