@@ -56,12 +56,6 @@ namespace CBJobSearch
             }
         }
 
-        protected void RepBinder(Object Sender, RepeaterItemEventArgs e)
-        {
-
-        }
-
-
         private ResponseJobSearch performSearch(string location, string keywords, Category catToSearch)
         {
             ResponseJobSearch ace;

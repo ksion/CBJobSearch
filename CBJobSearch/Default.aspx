@@ -9,7 +9,7 @@
     <fieldset>
         <legend>Simple Search</legend>
         <div class="mainText" contenteditable="inherit" dir="ltr">
-            I wish to search within the
+            I want to search within the
             <asp:DropDownList ID="DropDown1" runat="server" PlaceHolder="What Job Category?">
             </asp:DropDownList>
             job category, preferably located near the
