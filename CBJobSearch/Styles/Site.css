@@ -192,6 +192,11 @@ table
     width: 365px;
 }
 
+.results 
+{
+    width: 100%;
+}
+
 tr:nth-child(odd)
 {
     background-color: White;
