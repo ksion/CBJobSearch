@@ -57,14 +57,14 @@ namespace CBJobSearch {
                     .WhereKeywords(keywords.ToString())
                     .WhereLocation(location.ToString())
                     .WhereCategories(catToSearch)
-                    .OrderBy(OrderByType.Title)
+                    .OrderBy(OrderByType.Distace)
                     .Ascending()
                     .Search();
             } else {
                 ace = api.JobSearch()
                     .WhereKeywords(keywords.ToString())
                     .WhereLocation(location.ToString())
-                    .OrderBy(OrderByType.Title)
+                    .OrderBy(OrderByType.Distace)
                     .Ascending()
                     .Search();
             };
