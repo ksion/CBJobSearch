@@ -10,10 +10,8 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Collections.Specialized;
 
-namespace CBJobSearch
-{
-    public partial class _Default : System.Web.UI.Page
-    {
+namespace CBJobSearch {
+    public partial class _Default : System.Web.UI.Page {
         ResponseJobSearch answers = null;
 
         static NameValueCollection appSettings = ConfigurationManager.AppSettings;
@@ -22,12 +20,10 @@ namespace CBJobSearch
 
         List<Category> cats = api.GetCategories().WhereCountryCode(CountryCode.US).ListAll();
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
+        protected void Page_Load(object sender, EventArgs e) {
             prepareDropDownList();
 
-            if (IsPostBack)
-            {
+            if (IsPostBack) {
                 /* Values from form */
                 var category = DropDown1.SelectedValue;
                 var location = TextBox1.Text;
@@ -36,8 +32,7 @@ namespace CBJobSearch
                 Category catToSearch = findCategory(cats, category);
                 answers = performSearch(location, keywords, catToSearch);
 
-                if (answers.Results.Count > 0)
-                {
+                if (answers.Results.Count > 0) {
                     ph_searchRes.Visible = true;
                     rptList.DataSource = answers.Results;
                     rptList.DataBind();
@@ -46,22 +41,18 @@ namespace CBJobSearch
             }
         }
 
-        private void prepareDropDownList()
-        {
+        private void prepareDropDownList() {
             DropDown1.Items.Add(new ListItem("What Job Category?", "ALL"));
 
-            foreach (var category in cats)
-            {
+            foreach (var category in cats) {
                 DropDown1.Items.Add(new ListItem(category.Names[0].Value, category.Code));
             }
         }
 
-        private ResponseJobSearch performSearch(string location, string keywords, Category catToSearch)
-        {
+        private ResponseJobSearch performSearch(string location, string keywords, Category catToSearch) {
             ResponseJobSearch ace;
 
-            if (catToSearch != null)
-            {
+            if (catToSearch != null) {
                 ace = api.JobSearch()
                     .WhereKeywords(keywords.ToString())
                     .WhereLocation(location.ToString())
@@ -69,9 +60,7 @@ namespace CBJobSearch
                     .OrderBy(OrderByType.Title)
                     .Ascending()
                     .Search();
-            }
-            else
-            {
+            } else {
                 ace = api.JobSearch()
                     .WhereKeywords(keywords.ToString())
                     .WhereLocation(location.ToString())
@@ -88,12 +77,10 @@ namespace CBJobSearch
          * If the condition does not pass, the keyword search will be based off the
          * input from the form.
          */
-        private static string validateKeyWords(string keywords)
-        {
+        private static string validateKeyWords(string keywords) {
             string ace = null;
 
-            if (keywords != null)
-            {
+            if (keywords != null) {
                 ace = keywords;
             }
 
@@ -106,12 +93,10 @@ namespace CBJobSearch
          * Atlanta, GA. If the condition does not pass, the location will be set to null
          * and the search will be based off the input from the textbox.
          */
-        private static string validateLocation(string location)
-        {
+        private static string validateLocation(string location) {
             string ace = null;
 
-            if (location.Length == 0)
-            {
+            if (location.Length == 0) {
                 ace = "Atlanta, GA";
             }
 
@@ -123,14 +108,11 @@ namespace CBJobSearch
          * actual job category. If the input string does not match any of the codes,
          * the search will default to all of the job categories.
          */
-        private static Category findCategory(List<Category> codes, string category)
-        {
+        private static Category findCategory(List<Category> codes, string category) {
             Category ace = null;
 
-            foreach (Category x in codes)
-            {
-                if (x.Code.Equals(category))
-                {
+            foreach (Category x in codes) {
+                if (x.Code.Equals(category)) {
                     ace = x;
                 }
             }
